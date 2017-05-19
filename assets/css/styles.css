@@ -1,0 +1,17 @@
+body{
+	background-image: url("https://ak2.picdn.net/shutterstock/videos/7034680/thumb/1.jpg");
+	background-size: cover;
+}
+#header{
+	font-size: 50px;
+
+}
+.container {
+	color: white;
+	width: 50%;
+	padding: 25px;
+}
+#random-number {
+	font-size: 40px;
+
+}

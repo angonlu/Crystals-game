@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+	<title>Crystals game</title>
+</head>
+<body>
+
+<header class="container">
+<h1 id="header">Crystals game</h1>
+</header>
+
+<div class="container" id="instructions">
+<p>When the game starts, you'll receive a random number.</p>
+<br>
+<p>Each of the four crystals below has a value, which changes every round. Every time you click on one, it adds value to your total score</p>
+<br>
+<p>Your goal is to match your total score to the number below</p>
+<br>
+<p>If you go over, you lose and the game starts over with a brand new goal and a new value in each crystal. Good luck!</p>
+</div>
+
+<div class="container" id="value">
+<span id="random-number"></span>
+</div>
+
+<div class="container">
+<p>Wins: <span id="wins"></span></p>
+<p>Losses: <span id="losses"></span></p>
+</div>
+
+<div class="container">
+<img id="crystal1" src="assets/images/crystal1.png" class="crystals">
+<img id="crystal2" src="assets/images/crystal2.png" class="crystals">
+<img id="crystal3" src="assets/images/crystal3.png" class="crystals">
+<img id="crystal4" src="assets/images/crystal4.png" class="crystals">
+</div>
+
+<div class="container">
+<p>Your Score is: <span id="score">0</span></p>
+</div>
+
+
+<script type="text/javascript" src="assets/script/script.js"></script>
+
+</body>
+</html>
