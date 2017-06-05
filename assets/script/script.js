@@ -23,6 +23,9 @@ function getRandomGoal(min, max) {
 }
 randGoal = (getRandomGoal(19, 120));
 $("#random-number").html(randGoal);
+
+
+
 // get random number and assigns it to first crystal
 
 function getRandomOption() {
