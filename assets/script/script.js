@@ -1,21 +1,21 @@
 
 // between 19-120
-var randGoal = 0;
+var randGoal=0;
 // wins and losses - have to change every round
 
 // random value of crystals. Number has to be random
 // between 1-12
-var crystal1 = 0;
-var crystal2 = 0;
-var crystal3 = 0;
-var crystal4 = 0;
+var crystal1=0;
+var crystal2=0;
+var crystal3=0;
+var crystal4=0;
 /*sum of the user guesses - if equal to randGoal, start
 increase wincount generate random(call random function)
 for every crystal
 */
-var userTotal = 0;
-var wins = 0;
-var losses = 0;
+var userTotal =0;
+var wins=0;
+var losses=0;
 
 // get random value which is the goal and assigns it to a div
 function getRandomGoal(min, max) {
@@ -61,8 +61,9 @@ $(".crystals").on("click", function () {
 		alert("You win this round!");
 		randGoal = (getRandomGoal(19, 120));
 		$("#random-number").html(randGoal);
+		$("#wins").html(wins);
 		$("#wins").html(wins ++);
-		userTotal = 0;
+		// userTotal = 0;
 		$("#score").html(userTotal);
 	}
 	else if(userTotal > randGoal){
@@ -70,6 +71,7 @@ $(".crystals").on("click", function () {
 		alert("Try again!")
 		randGoal = (getRandomGoal(19, 120));
 		$("#random-number").html(randGoal);
+		$("#losses").html(losses);
 		$("#losses").html(losses ++);
 		userTotal = 0;
 		$("#score").html(userTotal);

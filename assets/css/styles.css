@@ -2,6 +2,7 @@ body{
 	background-image: url("https://ak2.picdn.net/shutterstock/videos/7034680/thumb/1.jpg");
 	background-size: cover;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 	
 }
 #header{
@@ -16,4 +17,7 @@ body{
 #random-number {
 	font-size: 40px;
 
+}
+.minerals {
+	margin: 10px;
 }
