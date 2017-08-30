@@ -1,5 +1,6 @@
 
 // between 19-120
+
 var randGoal=0;
 // wins and losses - have to change every round
 
@@ -16,6 +17,7 @@ for every crystal
 var userTotal =0;
 var wins=0;
 var losses=0;
+
 
 // get random value which is the goal and assigns it to a div
 function getRandomGoal(min, max) {
@@ -44,9 +46,11 @@ $("#crystal3").attr("value", getRandomOption())
 // gets random number and assigns it to fourth crystal
 
 $("#crystal4").attr("value", getRandomOption()) 
+$("#wins").html(wins);
+$("#losses").html(losses);
 
-
-$(".crystals").on("click", function () {
+$(".minerals").on("click", function () {
+	console.log("a crystal has been clicked!")
 	var crystalValue = ($(this).attr("value"));
 
 	crystalValue = parseInt(crystalValue);
@@ -61,9 +65,9 @@ $(".crystals").on("click", function () {
 		alert("You win this round!");
 		randGoal = (getRandomGoal(19, 120));
 		$("#random-number").html(randGoal);
+		wins ++
 		$("#wins").html(wins);
-		$("#wins").html(wins ++);
-		// userTotal = 0;
+		userTotal = 0;
 		$("#score").html(userTotal);
 	}
 	else if(userTotal > randGoal){
@@ -71,8 +75,10 @@ $(".crystals").on("click", function () {
 		alert("Try again!")
 		randGoal = (getRandomGoal(19, 120));
 		$("#random-number").html(randGoal);
-		$("#losses").html(losses);
-		$("#losses").html(losses ++);
+		losses ++
+		$("#losses").html(losses)
+		
+		// $("#losses").html(losses ++);
 		userTotal = 0;
 		$("#score").html(userTotal);
 
