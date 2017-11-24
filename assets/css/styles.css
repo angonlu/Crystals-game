@@ -1,37 +1,51 @@
 body{
 	background-image: url("https://ak2.picdn.net/shutterstock/videos/7034680/thumb/1.jpg");
 	background-size: cover;
-	text-align: center;
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-	
-	
-}
-#header{
-	font-size: 50px;
-
+	color: white;
+	margin: 0;
 }
 
-.jumbotron{
+.jumbotron {
+	display: none;
+	padding: 10px;
+	text-align: center;
+	color: white;
 	background-color: rgba(102, 51, 153, .6);
-	color: white;
+}
+.jumbotron h1 {
+	font-size: 50px;
 }
 
-#random-number {
-	font-size: 40px;
-
+.title{
+	font-size: 36px;
+	text-align: center;
+	/*margin-bottom: 5%;*/
 }
-.minerals {
-	margin: 10px;
+.instructions {
+	list-style-type: decimal; 
+	list-style-position: inside;
+	line-height: 1.5;
+	margin: 1em;
 }
-
-.panel {
-	opacity: 0.5;
+.results {
+	font-size: 25px;
 }
-
-.panel-body {
-	background-color: rgba(0, 0, 0, 1.0);
-	color: white;
+.container {
+	display: none;
+	margin: 0 auto;
+	width: 75%;
+	margin-top: 5%;
+	background-color: rgba(0, 0, 0, .6);
 }
-#instructions {
-	opacity: 1.0;
+.scoreboard {
+	margin: 1em;
+	line-height: 1.5;
+}
+.crystals {
+	text-align: center;
+	display: none;
+}
+.minerals:hover {
+	border: 1px solid white;
 }

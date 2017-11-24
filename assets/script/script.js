@@ -1,19 +1,11 @@
 
 // between 19-120
-
 var randGoal=0;
-// wins and losses - have to change every round
-
-// random value of crystals. Number has to be random
 // between 1-12
 var crystal1=0;
 var crystal2=0;
 var crystal3=0;
 var crystal4=0;
-/*sum of the user guesses - if equal to randGoal, start
-increase wincount generate random(call random function)
-for every crystal
-*/
 var userTotal =0;
 var wins=0;
 var losses=0;
@@ -29,26 +21,32 @@ $("#random-number").html(randGoal);
 
 
 // get random number and assigns it to first crystal
-
 function getRandomOption() {
 	return Math.floor(Math.random() * (12 - 1)) + 1;
 }
 $("#crystal1").attr("value", getRandomOption())
 
-// gets random number and assigns it to second crystal
-
+//second crystal
 $("#crystal2").attr("value", getRandomOption())
 
-// gets random number and assigns it to third crystal
-
+//third crystal
 $("#crystal3").attr("value", getRandomOption())
 
-// gets random number and assigns it to fourth crystal
+//fourth crystal
+$("#crystal4").attr("value", getRandomOption())
 
-$("#crystal4").attr("value", getRandomOption()) 
+//writes wins and losses
 $("#wins").html(wins);
 $("#losses").html(losses);
 
+$(document).ready(function(){
+	$(".jumbotron").fadeIn(2500)
+	$('.container').fadeIn(3000);
+	$(".crystals").fadeIn(3100);
+})
+
+
+// Event listener, takes value from images and adds it to counter
 $(".minerals").on("click", function () {
 	console.log("a crystal has been clicked!")
 	var crystalValue = ($(this).attr("value"));
@@ -77,8 +75,6 @@ $(".minerals").on("click", function () {
 		$("#random-number").html(randGoal);
 		losses ++
 		$("#losses").html(losses)
-		
-		// $("#losses").html(losses ++);
 		userTotal = 0;
 		$("#score").html(userTotal);
 
@@ -90,9 +86,6 @@ function resetValues() {
 	$("#crystal3").attr("value", getRandomOption())
 	$("#crystal4").attr("value", getRandomOption()) 
 }
-
-
-
 
 
 
